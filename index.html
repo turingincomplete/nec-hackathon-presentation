@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>NEC Hackathon Presentation</title>
+    <meta name="description" content="A NEC Hackathon Presentation" />
+
+    <link rel="stylesheet" href="nec-hackathon-presentation/css/reset.css" />
+    <link rel="stylesheet" href="nec-hackathon-presentation/css/reveal.css" />
+    <link rel="stylesheet" href="nec-hackathon-presentation/css/theme/moon.css" />
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css" />
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.type = "text/css";
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? "nec-hackathon-presentation/css/print/pdf.css"
+        : "nec-hackathon-presentation/css/print/paper.css";
+      document.getElementsByTagName("head")[0].appendChild(link);
+    </script>
+    <style>
+      .p-abs {
+        position: absolute;
+      }
+      .desc {
+        top: -10px;
+        left: 20px;
+        color: lightgray;
+        font-size: 0.4em;
+      }
+      .github-profs {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        bottom: 20px;
+        left: 10px;
+        z-index: 99999;
+      }
+      .github-profs a img {
+        width: 1em;
+        border-radius: 50%;
+        margin: 0 0 0 10px;
+      }
+
+      .github-profs a img:hover {
+        opacity: 0.6;
+      }
+      div.slides {
+        font-size: 0.8em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <p class="p-abs desc">A NEC Hackathon Presentation</p>
+      <div class="p-abs github-profs">
+        <a href="https://github.com/jaydattc" target="_blank"
+          ><img
+            alt="Jaydattsinh Champavat"
+            src="https://avatars0.githubusercontent.com/u/31364263?s=96&v=4"
+        /></a>
+        <a href="https://github.com/sayon6860" target="_blank"
+          ><img
+            src="https://avatars1.githubusercontent.com/u/28038566?s=460&v=4"
+            alt="Shubham Singh"
+        /></a>
+        <a href="https://github.com/drkfyre" target="_blank">
+          <img
+            src="https://avatars1.githubusercontent.com/u/37501628?s=460&v=4"
+            alt="Harsh Parmar"
+          />
+        </a>
+      </div>
+      <div class="slides">
+        <section>
+          <h2>
+            Utilizing reward system and live tracking for better public
+            transportation
+          </h2>
+          <p style="font-size: 1.25em">
+            Made by - team
+            <a
+              href="https://www.hackerearth.com/challenges/hackathon/nec-hackathon-transport/dashboard/b522609/team/"
+              target="_blank"
+              >turingincomplete</a
+            >
+          </p>
+          <p >
+            A progressive web app that makes public transport more convenient
+            and accessible. It provides assistance with live tracking schedules
+            and a reward system which encourages users towards public transport.
+          </p>
+        </section>
+        <section>
+          <h2>User oriented live-tracking</h2>
+          <p>
+            Instead of using centralized and cost-ineffective methods for
+            real-time location of transports. Our system relies on user focused
+            live tracking made possible by active users providing real-time
+            location of their current route.
+          </p>
+        </section>
+        <section>
+          <h2>Accurately predicts transportation delays</h2>
+          <p>
+            To determine scheduling delays the system uses a time-series
+            algorithms which considers factors like congestion, commute-hours
+            and week-days patterns, route obstructions, etc.
+          </p>
+        </section>
+        <section>
+          <h2>Users get incentivized for using public transport</h2>
+          <p>
+            A reward system that provides incentives to the user for providing
+            their real-time geolocation data which helps to track the particular
+            transport.
+          </p>
+        </section>
+        <section>
+          <h2>Intuitive User Experience</h2>
+          <p>
+            A simple, intuitive and straight-forward user experience with
+            localisation support for mutiple regional languages.
+          </p>
+        </section>
+      </div>
+    </div>
+
+    <script src="nec-hackathon-presentation/js/reveal.js"></script>
+
+    <script>
+      Reveal.initialize({
+        dependencies: []
+      });
+    </script>
+  </body>
+</html>
