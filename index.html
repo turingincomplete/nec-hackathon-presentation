@@ -54,7 +54,6 @@
       transform: scale(1);
       min-width: 190px;
       min-height: 92px;
-      margin: 0 20px 0 0;
     }
 
     #min-height-img:hover {
@@ -70,7 +69,7 @@
       -moz-transform: scale(2) translate(0, -10%);
     }
 
-    .style_prevu_kit {
+    .image-preview {
       display: inline-block;
       border: 0;
       /* min-height: 30vh; */
@@ -84,7 +83,7 @@
       transform: scale(1);
     }
 
-    .style_prevu_kit:hover {
+    .image-preview:hover {
       z-index: 2;
       transition: all 200ms ease-in;
       transform: scale(4.5) translate(-40%, calc(-10%));
@@ -107,6 +106,7 @@
     }
 
     .desc {
+      position: absolute;
       top: -10px;
       left: 20px;
       color: lightgray;
@@ -123,7 +123,7 @@
       position: relative;
       background-color: cadetblue;
       border-radius: 5px;
-      border:0;
+      border: 0;
       margin-bottom: 10px;
     }
 
@@ -147,14 +147,81 @@
     div.slides {
       font-size: 0.8em;
     }
+
+    @media only screen and (max-width : 480px) {
+      div.slides {
+        font-size: 1.2em;
+      }
+
+      .fond {
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+      }
+
+
+      #min-height-img {
+        display: inline-block;
+        border: 0;
+        min-height: 30vh;
+        -webkit-transition: all 200ms ease-in;
+        -webkit-transform: scale(1);
+        -ms-transition: all 200ms ease-in;
+        -ms-transform: scale(1);
+        -moz-transition: all 200ms ease-in;
+        -moz-transform: scale(1);
+        transition: all 200ms ease-in;
+        transform: scale(1);
+        min-width: 190px;
+        min-height: 92px;
+      }
+
+      #min-height-img:hover {
+        box-shadow: 0;
+        z-index: 2;
+        transition: all 200ms ease-in;
+        transform: scale(3.5) translate(0, -20%);
+        -webkit-transition: all 200ms ease-in;
+        -webkit-transform: scale(3.5) translate(0, -20%);
+        -ms-transition: all 200ms ease-in;
+        -ms-transform: scale(3.5) translate(0, -20%);
+        -moz-transition: all 200ms ease-in;
+        -moz-transform: scale(3.5) translate(0, -20%);
+      }
+
+      .image-preview {
+        display: inline-block;
+        border: 0;
+        min-height: 40vh;
+        -webkit-transition: all 200ms ease-in;
+        -webkit-transform: scale(1);
+        -ms-transition: all 200ms ease-in;
+        -ms-transform: scale(1);
+        -moz-transition: all 200ms ease-in;
+        -moz-transform: scale(1);
+        transition: all 200ms ease-in;
+        transform: scale(1);
+      }
+
+      .image-preview:hover {
+        z-index: 2;
+        transition: all 200ms ease-in;
+        transform: scale(4.5) translate(0, calc(-30%));
+        -webkit-transition: all 200ms ease-in;
+        -webkit-transform: scale(4.5) translate(0, calc(-30%));
+        -ms-transition: all 200ms ease-in;
+        -ms-transform: scale(4.5) translate(0, calc(-30%));
+        -moz-transition: all 200ms ease-in;
+        -moz-transform: scale(4.5) translate(0, calc(calc(-30%)));
+      }
+    }
   </style>
 </head>
 
 <body>
   <div class="reveal">
-    <p class="p-abs desc">A NEC Hackathon Presentation</p>
+    <p class="desc">A NEC Hackathon Presentation</p>
     <div class="p-abs">
-      <button class="group-link"><a
+      <button class="group-link"><a target="_blank"
           href="https://www.hackerearth.com/challenges/hackathon/nec-hackathon-transport/dashboard/b522609/team/">HackerEarth
           Group</a></button>
       <div class="github-profs">
@@ -196,7 +263,7 @@
               live tracking made possible by active users providing the real-time
               location of their current route.
             </p>
-            <img class="style_prevu_kit" data-src="SVG/Artboard_3.svg" alt="User oriented live-tracking">
+            <img class="image-preview" data-src="SVG/Artboard_3.svg" alt="User oriented live-tracking">
           </div>
       </section>
       <section>
@@ -207,8 +274,8 @@
             algorithms which considers factors like congestion, commute-hours
             and weekd days patterns, route obstructions, etc.
           </p>
-          <img class="style_prevu_kit" data-src="SVG/Artboard_1.svg" alt="Accurately predicts transportation delays #1">
-          <img class="style_prevu_kit" data-src="SVG/Artboard_3.svg" alt="Accurately predicts transportation delays #2">
+          <img class="image-preview" data-src="SVG/Artboard_1.svg" alt="Accurately predicts transportation delays #1">
+          <img class="image-preview" data-src="SVG/Artboard_3.svg" alt="Accurately predicts transportation delays #2">
         </div>
       </section>
       <section>
@@ -219,7 +286,7 @@
             their real-time geolocation data which helps to track the particular
             transport.
           </p>
-          <img class="style_prevu_kit" id="imageShiftUp" data-src="SVG/Artboard_1.svg"
+          <img class="image-preview" id="imageShiftUp" data-src="SVG/Artboard_1.svg"
             alt="Users get incentivized for using public transport">
         </div>
       </section>
@@ -236,11 +303,12 @@
       <section>
         <h2>Mockups and Practical design</h2>
         <div class="fond">
-          <img class="style_prevu_kit" id="min-height-img" data-src="SVG/Artboard_1.svg" alt="App mockups showcase">
-          <img class="style_prevu_kit" id="min-height-img" data-src="SVG/Artboard_2.svg" alt="App mockups showcase">
-          <img class="style_prevu_kit" id="min-height-img" data-src="SVG/Artboard_3.svg" alt="App mockups showcase">
-          <img class="style_prevu_kit" id="min-height-img" data-src="SVG/Artboard_4.svg" alt="App mockups showcase">
-          <img class="style_prevu_kit" id="min-height-img" data-src="SVG/Artboard_5.svg" alt="App mockups showcase">
+          <img class="image-preview" id="min-height-img" data-src="SVG/Artboard_1.svg" alt="App mockups showcase">
+          <img class="image-preview" id="min-height-img" data-src="SVG/Artboard_2.svg" alt="App mockups showcase">
+          <div style="width:100%"></div>
+          <img class="image-preview" id="min-height-img" data-src="SVG/Artboard_3.svg" alt="App mockups showcase">
+          <img class="image-preview" id="min-height-img" data-src="SVG/Artboard_4.svg" alt="App mockups showcase">
+          <img class="image-preview" id="min-height-img" data-src="SVG/Artboard_5.svg" alt="App mockups showcase">
         </div>
       </section>
     </div>
@@ -250,8 +318,8 @@
   <script src="js/reveal.js"></script>
 
   <script>
-      document.querySelector("#imageShiftUp").addEventListener('mouseout', e => e.target.style.transform = 'scale(1) translate(0, 0)');
-    document.querySelector("#imageShiftUp").addEventListener('mouseover', e => e.target.style.transform = 'scale(4.5) translate(-40%, calc(-20%))');
+    document.querySelector("#imageShiftUp").addEventListener('mouseout', e => e.target.style.transform = 'scale(1) translate(0, 0)');
+    document.querySelector("#imageShiftUp").addEventListener('mouseover', e => e.target.style.transform = `scale(4.5) translate(${window.innerWidth < 480 ? 0 : "-40%"}, calc(${window.innerWidth < 480 ? "-25%" : "-15%"}))`);
     Reveal.initialize({
       dependencies: []
     });
