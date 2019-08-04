@@ -1,146 +1,265 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
 
-    <title>NEC Hackathon Presentation</title>
-    <meta name="description" content="A NEC Hackathon Presentation" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/reveal.css" />
-    <link rel="stylesheet" href="css/theme/moon.css" />
+  <title>NEC Hackathon Presentation</title>
+  <meta name="description" content="A NEC Hackathon Presentation" />
 
-    <!-- Theme used for syntax highlighting of code -->
-    <link rel="stylesheet" href="lib/css/monokai.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/reveal.css" />
+  <link rel="stylesheet" href="css/theme/moon.css" />
 
-    <!-- Printing and PDF exports -->
-    <script>
-      var link = document.createElement("link");
-      link.rel = "stylesheet";
-      link.type = "text/css";
-      link.href = window.location.search.match(/print-pdf/gi)
-        ? "css/print/pdf.css"
-        : "css/print/paper.css";
-      document.getElementsByTagName("head")[0].appendChild(link);
-    </script>
-    <style>
-      .p-abs {
-        position: absolute;
-      }
-      .desc {
-        top: -10px;
-        left: 20px;
-        color: lightgray;
-        font-size: 0.4em;
-      }
-      .github-profs {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        bottom: 20px;
-        left: 10px;
-        z-index: 99999;
-      }
-      .github-profs a img {
-        width: 1em;
-        border-radius: 50%;
-        margin: 0 0 0 10px;
-      }
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="lib/css/monokai.css" />
 
-      .github-profs a img:hover {
-        opacity: 0.6;
-      }
-      div.slides {
-        font-size: 0.8em;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="reveal">
-      <p class="p-abs desc">A NEC Hackathon Presentation</p>
-      <div class="p-abs github-profs">
-        <a href="https://github.com/jaydattc" target="_blank"
-          ><img
-            alt="Jaydattsinh Champavat"
-            src="https://avatars0.githubusercontent.com/u/31364263?s=96&v=4"
-        /></a>
-        <a href="https://github.com/sayon6860" target="_blank"
-          ><img
-            src="https://avatars1.githubusercontent.com/u/28038566?s=460&v=4"
-            alt="Shubham Singh"
-        /></a>
+  <!-- Core CSS file -->
+  <link rel="stylesheet" href="css/photoswipe.css">
+  <!-- Core JS file -->
+  <script src="js/photoswipe.min.js"></script>
+
+  <!-- UI JS file -->
+  <script src="js/photoswipe-ui-default.min.js"></script>
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.type = "text/css";
+    link.href = window.location.search.match(/print-pdf/gi)
+      ? "css/print/pdf.css"
+      : "css/print/paper.css";
+    document.getElementsByTagName("head")[0].appendChild(link);
+  </script>
+  <style>
+    .fond {
+      position: absolute;
+      border: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .reveal section img {
+      border: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+
+    #min-height-img {
+      display: inline-block;
+      border: 0;
+      /* min-height: 30vh; */
+      -webkit-transition: all 200ms ease-in;
+      -webkit-transform: scale(1);
+      -ms-transition: all 200ms ease-in;
+      -ms-transform: scale(1);
+      -moz-transition: all 200ms ease-in;
+      -moz-transform: scale(1);
+      transition: all 200ms ease-in;
+      transform: scale(1);
+      min-width: 190px;
+      min-height: 92px;
+      margin: 0 20px 0 0;
+    }
+
+    #min-height-img:hover {
+      box-shadow: 0;
+      z-index: 2;
+      transition: all 200ms ease-in;
+      transform: scale(2) translate(0, -10%);
+      -webkit-transition: all 200ms ease-in;
+      -webkit-transform: scale(2) translate(0, -10%);
+      -ms-transition: all 200ms ease-in;
+      -ms-transform: scale(2) translate(0, -10%);
+      -moz-transition: all 200ms ease-in;
+      -moz-transform: scale(2) translate(0, -10%);
+    }
+
+    .style_prevu_kit {
+      display: inline-block;
+      border: 0;
+      /* min-height: 30vh; */
+      -webkit-transition: all 200ms ease-in;
+      -webkit-transform: scale(1);
+      -ms-transition: all 200ms ease-in;
+      -ms-transform: scale(1);
+      -moz-transition: all 200ms ease-in;
+      -moz-transform: scale(1);
+      transition: all 200ms ease-in;
+      transform: scale(1);
+    }
+
+    .style_prevu_kit:hover {
+      z-index: 2;
+      transition: all 200ms ease-in;
+      transform: scale(4.5) translate(-40%, calc(-10%));
+      -webkit-transition: all 200ms ease-in;
+      -webkit-transform: scale(4.5) translate(-40%, calc(-10%));
+      -ms-transition: all 200ms ease-in;
+      -ms-transform: scale(4.5) translate(-40%, calc(-10%));
+      -moz-transition: all 200ms ease-in;
+      -moz-transform: scale(4.5) translate(-40%, calc(calc(-10%)));
+    }
+
+    .p-abs {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      bottom: 20px;
+      left: 10px;
+      z-index: 99999;
+    }
+
+    .desc {
+      top: -10px;
+      left: 20px;
+      color: lightgray;
+      font-size: 0.4em;
+    }
+
+    .github-profs {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .group-link {
+      all: unset;
+      background-color: cadetblue;
+    }
+
+    .group-link a {
+      font-size: 0.5em;
+      color: coral;
+      text-decoration: none;
+      padding: auto;
+    }
+
+    .github-profs a img {
+      width: 1em;
+      border-radius: 50%;
+      margin: 0 0 0 10px;
+    }
+
+    .github-profs a img:hover {
+      opacity: 0.6;
+    }
+
+    div.slides {
+      font-size: 0.8em;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="reveal">
+    <p class="p-abs desc">A NEC Hackathon Presentation</p>
+    <div class="p-abs">
+      <button class="group-link"><a
+          href="https://www.hackerearth.com/challenges/hackathon/nec-hackathon-transport/dashboard/b522609/team/">HackerEarth
+          Group</a></button>
+      <div class="github-profs">
+        <a href="https://github.com/jaydattc" target="_blank"><img alt="Jaydattsinh Champavat"
+            src="https://avatars0.githubusercontent.com/u/31364263?s=96&v=4" /></a>
+        <a href="https://github.com/sayon6860" target="_blank"><img
+            src="https://avatars1.githubusercontent.com/u/28038566?s=460&v=4" alt="Shubham Singh" /></a>
         <a href="https://github.com/drkfyre" target="_blank">
-          <img
-            src="https://avatars1.githubusercontent.com/u/37501628?s=460&v=4"
-            alt="Harsh Parmar"
-          />
+          <img src="https://avatars1.githubusercontent.com/u/37501628?s=460&v=4" alt="Harsh Parmar" />
         </a>
       </div>
-      <div class="slides">
-        <section>
-          <h2>
-            Utilizing reward system and live tracking for better public
-            transportation
-          </h2>
-          <p style="font-size: 1.25em">
-            Made by - team
-            <a
-              href="https://www.hackerearth.com/challenges/hackathon/nec-hackathon-transport/dashboard/b522609/team/"
-              target="_blank"
-              >turingincomplete</a
-            >
-          </p>
-          <p >
-            A progressive web app that makes public transport more convenient
-            and accessible. It provides assistance with live tracking schedules
-            and a reward system which encourages users towards public transport.
-          </p>
-        </section>
-        <section>
+
+    </div>
+    <div class="slides">
+      <section>
+        <h2>
+          Utilizing reward system and live tracking for better public
+          transportation
+        </h2>
+        <p style="font-size: 1.25em">
+          Made by - team
+          <a href="https://www.hackerearth.com/challenges/hackathon/nec-hackathon-transport/dashboard/b522609/team/"
+            target="_blank">turingincomplete</a>
+        </p>
+        <p>
+          A progressive web app that makes public transport more convenient
+          and accessible. It provides assistance with live tracking schedules
+          and a reward system which encourages users towards public transport.
+        </p>
+      </section>
+      <section>
+        <div>
           <h2>User oriented live-tracking</h2>
-          <p>
-            Instead of using centralized and cost-ineffective methods for
-            real-time location of transports. Our system relies on user focused
-            live tracking made possible by active users providing the real-time
-            location of their current route.
-          </p>
-        </section>
-        <section>
-          <h2>Accurately predicts transportation delays</h2>
+
+          <div class="fond">
+            <p>
+              Instead of using centralized and cost-ineffective methods for
+              real-time location of transports. Our system relies on user focused
+              live tracking made possible by active users providing the real-time
+              location of their current route.
+            </p>
+            <img class="style_prevu_kit" src="/SVG/Artboard_3.svg" alt="User oriented live-tracking">
+          </div>
+      </section>
+      <section>
+        <h2>Accurately predicts transportation delays</h2>
+        <div class="fond">
           <p>
             To determine scheduling delays the system uses a time-series
             algorithms which considers factors like congestion, commute-hours
             and weekd days patterns, route obstructions, etc.
           </p>
-        </section>
-        <section>
-          <h2>Users get incentivized for using public transport</h2>
+          <img class="style_prevu_kit" src="/SVG/Artboard_1.svg" alt="Accurately predicts transportation delays #1">
+          <img class="style_prevu_kit" src="/SVG/Artboard_3.svg" alt="Accurately predicts transportation delays #2">
+        </div>
+      </section>
+      <section>
+        <h2>Users get incentivized for using public transport</h2>
+        <div class="fond">
           <p>
             A reward system that provides incentives to the user for providing
             their real-time geolocation data which helps to track the particular
             transport.
           </p>
-        </section>
-        <section>
-          <h2>Intuitive User Experience</h2>
+          <img class="style_prevu_kit" id="imageShiftUp" src="/SVG/Artboard_1.svg"
+            alt="Users get incentivized for using public transport">
+        </div>
+      </section>
+      <section>
+        <h2>Intuitive User Experience</h2>
+        <div class="fond">
           <p>
             A simple, intuitive and straightforward user interface with
-            localisation support for multiple regional languages for ease of use and access.
+            localisation support for multiple regional languages for ease of use
+            and access.
           </p>
-        </section>
-      </div>
+        </div>
+      </section>
+      <section>
+        <h2>Mockups and Practical design</h2>
+        <div class="fond">
+          <img class="style_prevu_kit" id="min-height-img" src="/SVG/Artboard_1.svg" alt="App mockups showcase">
+          <img class="style_prevu_kit" id="min-height-img" src="/SVG/Artboard_2.svg" alt="App mockups showcase">
+          <img class="style_prevu_kit" id="min-height-img" src="/SVG/Artboard_3.svg" alt="App mockups showcase">
+          <img class="style_prevu_kit" id="min-height-img" src="/SVG/Artboard_4.svg" alt="App mockups showcase">
+          <img class="style_prevu_kit" id="min-height-img" src="/SVG/Artboard_5.svg" alt="App mockups showcase">
+        </div>
+      </section>
     </div>
+  </div>
+  </div>
 
-    <script src="js/reveal.js"></script>
+  <script src="js/reveal.js"></script>
 
-    <script>
-      Reveal.initialize({
-        dependencies: []
-      });
-    </script>
-  </body>
+  <script>
+    document.querySelector("#imageShiftUp").addEventListener('mouseover', e => e.target.style.transform = 'scale(4.5) translate(-40%, calc(-20%))');
+    Reveal.initialize({
+      dependencies: []
+    });
+  </script>
+</body>
+
 </html>
