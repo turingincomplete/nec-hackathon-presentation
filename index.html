@@ -250,6 +250,7 @@
   <script src="js/reveal.js"></script>
 
   <script>
+      document.querySelector("#imageShiftUp").addEventListener('mouseout', e => e.target.style.transform = 'scale(1) translate(0, 0)');
     document.querySelector("#imageShiftUp").addEventListener('mouseover', e => e.target.style.transform = 'scale(4.5) translate(-40%, calc(-20%))');
     Reveal.initialize({
       dependencies: []
